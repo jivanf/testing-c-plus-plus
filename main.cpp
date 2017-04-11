@@ -11,10 +11,23 @@
 using namespace std;
 
 int main () {
-    char stringArray[] = "string";
-    for(int i = 0; stringArray[i]; ++i) {
-        printf("String is: %c\n", stringArray[i]);
+    
+    int x = 34;
+    int y = 80;
+    if(x < y) {
+        puts("y is bigger than x");
     }
-
+    
+    else if (x == y){
+        puts("x equals to y");
+    }
+    
+    else {
+        puts("x is bigger than y");
+    }
+    
+    printf("the bigger is: %d\n", x > y ? x : y);
+    
+    return 0;
     
 }
