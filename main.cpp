@@ -12,22 +12,34 @@ using namespace std;
 
 int main () {
     
-    int x = 34;
-    int y = 80;
-    if(x < y) {
-        puts("y is bigger than x");
+    int const ONE = 1;
+    int const TWO = 2;
+    int const THREE = 3;
+    int x = 2;
+    
+    puts("Hello world");
+    
+     switch (x) {
+        case ONE:
+            puts("one");
+            break;
+        case TWO:
+            puts("two");
+
+            break;
+        case THREE:
+            puts("three");
+            break;
+            
+        default:
+            break;
     }
+
     
-    else if (x == y){
-        puts("x equals to y");
-    }
     
-    else {
-        puts("x is bigger than y");
-    }
     
-    printf("the bigger is: %d\n", x > y ? x : y);
     
-    return 0;
+    
+    
     
 }
