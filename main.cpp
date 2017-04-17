@@ -12,34 +12,14 @@ using namespace std;
 
 int main () {
     
-    int const ONE = 1;
-    int const TWO = 2;
-    int const THREE = 3;
-    int x = 2;
+    char arr[] = {"string"};
+    int i = 0;
     
-    puts("Hello world");
-    
-     switch (x) {
-        case ONE:
-            puts("one");
-            break;
-        case TWO:
-            puts("two");
-
-            break;
-        case THREE:
-            puts("three");
-            break;
-            
-        default:
-            break;
+    while(i <= 12) {
+        printf("index #%d in arr[] is: %c\n",i, arr[i]);
+        ++i;
     }
-
     
-    
-    
-    
-    
-    
+    return 0;
     
 }
