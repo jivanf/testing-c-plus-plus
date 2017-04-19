@@ -9,22 +9,16 @@
 #include <iostream>
 
 using namespace std;
+int number = 1;
+void myFunction(int &number) {
+    ++(number);
+}
 
 int main () {
-    
-    char forString[] = "Using the for loop ";
-    string rangeBasedString = "Using the range-based for loop";
-    
-    // normal for loop
-    for(char * cp = forString; *cp; ++cp) {
-        printf("element: %c\n", *cp);
-    }
-    
-    // range-based for loop
-    for(int i : rangeBasedString) {
-        printf("element: %c\n", i);
-    }
-    
-    return 0;
+    printf("Value of number: %d\n", number);
+    myFunction(number);
+    printf("Value of number in myFunction: %d\n", number);
     
 }
+
+
