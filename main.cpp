@@ -12,12 +12,17 @@ using namespace std;
 
 int main () {
     
-    char arr[] = {"string"};
-    int i = 0;
+    char forString[] = "Using the for loop ";
+    string rangeBasedString = "Using the range-based for loop";
     
-    while(i <= 12) {
-        printf("index #%d in arr[] is: %c\n",i, arr[i]);
-        ++i;
+    // normal for loop
+    for(char * cp = forString; *cp; ++cp) {
+        printf("element: %c\n", *cp);
+    }
+    
+    // range-based for loop
+    for(int i : rangeBasedString) {
+        printf("element: %c\n", i);
     }
     
     return 0;
