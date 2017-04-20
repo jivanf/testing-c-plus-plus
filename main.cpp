@@ -10,15 +10,18 @@
 
 using namespace std;
 int number = 1;
-void myFunction(int &number) {
-    ++(number);
+void myFunction() {
+    static int i = 2;
+    i = 45;
+    cout << "i is: " << ++i << endl;
+    ++i;
+    cout << "i is: " << ++i << endl;
 }
 
 int main () {
-    printf("Value of number: %d\n", number);
-    myFunction(number);
-    printf("Value of number in myFunction: %d\n", number);
-    
+    myFunction();
+    myFunction();
+    myFunction();
 }
 
 
