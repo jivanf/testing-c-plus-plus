@@ -8,20 +8,19 @@
 
 #include <iostream>
 
-using namespace std;
-int number = 1;
-void myFunction() {
-    static int i = 2;
-    i = 45;
-    cout << "i is: " << ++i << endl;
-    ++i;
-    cout << "i is: " << ++i << endl;
+using std::cout;
+using std::cin;
+
+void function () {
+    puts("this is function()");
 }
 
 int main () {
-    myFunction();
-    myFunction();
-    myFunction();
+    puts("this is main()");
+    void (*fp)() = function;
+    (*fp)();
+    return 0;
 }
+
 
 
