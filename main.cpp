@@ -7,20 +7,28 @@
 //
 
 #include <iostream>
-
+#include <cstdarg>
 using std::cout;
 using std::cin;
 
-void function () {
-    puts("this is function()");
-}
+
+double average (const int count, ...) {
+    va_list ap;
+    int i;
+    double total = 0.0;
+    
+    va_start(ap, count);
+    for(i = 0; i < count; ++i) {
+        total += va_arg(ap, double);
+    }
+    va_end(ap);
+    return total / count;}
 
 int main () {
-    puts("this is main()");
-    void (*fp)() = function;
-    (*fp)();
-    return 0;
-}
+        printf("Average: %lf", average(5, 25.0, 35.7, 50.1, 127.6, 75.0));
+        return 0;
+    }
+     
 
 
 
