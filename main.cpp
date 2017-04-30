@@ -7,18 +7,10 @@
 //
 
 #include <iostream>
-#include <cstdarg>
+#define SUM (1 + 4)
 using namespace std;
-using std::cin;
-
-
-void myFunction() {
-    cout << "This will make the function loop" << endl;
-    myFunction();
-}
-
     
 int main () {
-    myFunction();
+    cout << "symbol sum equals to: " << SUM << endl;
     return 0;
 }
