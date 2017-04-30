@@ -8,27 +8,17 @@
 
 #include <iostream>
 #include <cstdarg>
-using std::cout;
+using namespace std;
 using std::cin;
 
 
-double average (const int count, ...) {
-    va_list ap;
-    int i;
-    double total = 0.0;
+void myFunction() {
+    cout << "This will make the function loop" << endl;
+    myFunction();
+}
+
     
-    va_start(ap, count);
-    for(i = 0; i < count; ++i) {
-        total += va_arg(ap, double);
-    }
-    va_end(ap);
-    return total / count;}
-
 int main () {
-        printf("Average: %lf", average(5, 25.0, 35.7, 50.1, 127.6, 75.0));
-        return 0;
-    }
-     
-
-
-
+    myFunction();
+    return 0;
+}
