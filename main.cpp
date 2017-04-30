@@ -7,10 +7,11 @@
 //
 
 #include <iostream>
-#define SUM (1 + 4)
+#include "header.h"
 using namespace std;
     
 int main () {
-    cout << "symbol sum equals to: " << SUM << endl;
+    cout << "integer in header.h is: \n" << ONE;
+    cout << "\nstring in header.h is: \n" << myString << "\n";
     return 0;
 }
