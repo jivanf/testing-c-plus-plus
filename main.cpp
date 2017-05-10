@@ -7,24 +7,17 @@
 //
 
 #include <iostream>
-//#define NUMBER_DEFINED
 #include "header.h"
+
+#define MIN(a, b) (a < b ? "x is less than y" : "y is less than x")
 	
 using namespace std;
 
 
 int main () {
-    int number = NUMBER;
     
-    if (number == 16) {
-        puts("NUMBER macro is NOT defined");
-    }
-    
-    else {
-        puts("NUMBER macro is defined");
-    
-    }
-    
-    cout << "NUMBER macro is: " << NUMBER << endl;
+    int x = 8;
+    int y = 10;
+    cout << MIN(x, y) << endl;
     return 0;
 }
