@@ -6,11 +6,19 @@
 //  Copyright © 2017 Jivan Flores. All rights reserved.
 //
 
+
 #ifndef header_h
 #define header_h
 
-#define ONE 1;
+#ifdef NUMBER_DEFINED
 
-char myString[] = "Hello world";
+#define NUMBER 32
+
+#else
+
+#define NUMBER 16
+
+
+#endif
 
 #endif /* header_h */

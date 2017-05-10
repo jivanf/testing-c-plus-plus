@@ -7,11 +7,24 @@
 //
 
 #include <iostream>
+//#define NUMBER_DEFINED
 #include "header.h"
+	
 using namespace std;
-    
+
+
 int main () {
-    cout << "integer in header.h is: \n" << ONE;
-    cout << "\nstring in header.h is: \n" << myString << "\n";
+    int number = NUMBER;
+    
+    if (number == 16) {
+        puts("NUMBER macro is NOT defined");
+    }
+    
+    else {
+        puts("NUMBER macro is defined");
+    
+    }
+    
+    cout << "NUMBER macro is: " << NUMBER << endl;
     return 0;
 }
